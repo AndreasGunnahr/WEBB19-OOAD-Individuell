@@ -129,8 +129,7 @@ En nackdel jag kan se med mönstret är att det kan uppkomma onödigt mycket abs
 
 #### 2.2.3 Summering
 
-Tycker att konstruktormönstret är ett väldigt nyttigt mönster att kunna då man 
-Då mönstret ger oss mycket struktur och gör det lätt för oss att skapa flera instanser av ett objekt över hela kodbasen så är det ett mönster jag kommer bära med mig i framtiden. Tycker även att inkapsling av kod är någonting som är viktigt och hjälper oss att minska fel som kan enkelt kan uppstå under utvecklingsfasen. 
+Tycker att konstruktormönstret är ett väldigt nyttigt mönster att kunna då mönstret ger oss mycket struktur och gör det lätt för oss att skapa flera instanser av ett objekt över hela kodbasen så är det ett mönster jag kommer bära med mig i framtiden. Tycker även att inkapsling av kod är någonting som är viktigt och hjälper oss att minska fel som kan enkelt kan uppstå under utvecklingsfasen. 
 
 Samtidigt tror jag att det är viktigt att fundera på ifall mönstret faktiskt är nödvändigt i ens applikation eller inte innan man startar. Annars finns det stor risk att vi istället bara introducera onödig komplexitet till projektet.
 
@@ -197,9 +196,11 @@ Dolda beroenden kan uppstå eftersom Singleton är tillgängligt i hela kodbasen
 
 #### 2.3.4 Summering
 
+Tycker att Singleton var ett av de tråkigare mönstrena att undersöka men samtidigt tycker jag det är ett oerhört viktigt mönster/koncept att ha koll på. Singleton mönstret bidrar till att koden blir mera resursvänlig och bidrar till att vi endast skapar ett nytt objekt ifall objektet redan inte finns. 
 
----- KVAR ATT GČRA --- 
+Viktigt att poängtera är även att dolda beroende kan uppstå ifall mönstret inte implementeras på ett bra sätt. Detta uppstår ofta genom att mönstret överanvänds över hela kodbasen. 
 
+Detta mönster används också inom många andra mönster som t.ex. Abstrakt fabrikmönstret, prototyp mönstret, fasad mönstret m.m. 
 
 ## 3. Dokumentation - Pizzafabrik
 
@@ -209,7 +210,7 @@ Applikation bygger också på att varje enskild pizza klass förlängs på baskl
 
 Tyckte att uppgiften var givande och rolig att implementera då man fick en bra förståelse för hur dessa två mönster fungerar ihop. Mönstrena i sig tyckte jag inte var speciellt svåra att jobba med, men kan samtidigt känna att det skulle kräva mycket mera planering ifall man skulle applicera dem i ett större projekt. 
 
-Applikationen kan ses i filen [PizzaFactory.js](). Filen är körbar som konsolapplikation och visar hur de två ovan nämnde mönstrena fungerar i praktiken.
+Applikationen kan ses i filen [PizzaFactory.js](https://github.com/AndreasGunnahr/WEBB19-OOAD-Individuell/blob/master/PizzaFactory.js). Filen är körbar som konsolapplikation och visar hur de två ovan nämnde mönstrena fungerar i praktiken.
 
 ## 4. OOAD - Pizzafabrik
 
