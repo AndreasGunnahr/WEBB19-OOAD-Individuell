@@ -55,7 +55,7 @@ Man hittar alla 10 olika design mönster under kapitlet "Javscript Desgin Patter
 
 ### 2.1 Fabriksmönster
 
-Det så kallade fabriksmönstret är ett objekt orienterat mönster som går under kategorin skapningsmönster. Fabriksmönstret följer även metodiken DRY ("don't repeat yourself") som på svenska betyder att man inte ska upprepa sig själv. Om man kollar på de andra mönstrena inom kategorin så skiljer sig fabriksmönstret genom att det inte uttryckligen kräver att vi använder en konstruktör. Istället kan en fabrik tillhandahålla ett generiskt gränssnitt för att skapa objekt, där vi kan ange vilken typ av fabriksobjekt vi vill skapa.
+Det så kallade fabriksmönstret är ett objekt orienterat mönster som går under kategorin skapningsmönster. Fabriksmönstret följer även metodiken DRY ("don't repeat yourself") som på svenska betyder att man inte ska upprepa sig själv. Om man kollar på de andra mönstrena inom kategorin så skiljer sig fabriksmönstret genom att det inte uttryckligen kräver att vi använder en konstruktor. Istället kan en fabrik tillhandahålla ett generiskt gränssnitt för att skapa objekt, där vi kan ange vilken typ av fabriksobjekt vi vill skapa.
 
 
 #### 2.1.2 Fördelar med mönstret
@@ -129,12 +129,11 @@ En nackdel jag kan se med mönstret är att det kan uppkomma onödigt mycket abs
 
 #### 2.2.3 Summering
 
-Tycker att konstruktormönstret är ett väldigt nyttigt mönster att kunna då mönstret ger oss mycket struktur och gör det lätt för oss att skapa flera instanser av ett objekt över hela kodbasen så är det ett mönster jag kommer bära med mig i framtiden. Tycker även att inkapsling av kod är någonting som är viktigt och hjälper oss att minska fel som kan enkelt kan uppstå under utvecklingsfasen. 
+Tycker att konstruktormönstret är ett väldigt nyttigt mönster att kunna då mönstret ger oss mycket struktur och gör det lätt för oss att skapa flera instanser av ett objekt över hela kodbasen, därför är det ett mönster jag kommer bära med mig i framtiden. Tycker även att inkapsling av kod är någonting som är viktigt och hjälper oss att minska fel som kan enkelt kan uppstå under utvecklingsfasen. 
 
 Samtidigt tror jag att det är viktigt att fundera på ifall mönstret faktiskt är nödvändigt i ens applikation eller inte innan man startar. Annars finns det stor risk att vi istället bara introducera onödig komplexitet till projektet.
 
 Kan dock se mig själv applicera mönstret ifall vi har en applikation som kräver att vi lätt behöver skapa flera instanser av liknande/samma objekt i våran kodbas.
-
 
 ### 2.3 Singleton-mönstret
 
@@ -178,13 +177,13 @@ function run() {
 }
 ```
 
-En viktigt notering när det kommer till våran getInstance-metod är att vi kan se ett annat designmönster som heter Lazy Load. Kortfattat så kontrollerar Lazy Load om en instans redan har skapats; om inte skapar den en och lagrar den för framtida referens. Vilket kommer att innebär att alla efterföljande anropp kommer att få den lagrade instansen.
+En viktigt notering när det kommer till våran getInstance-metod är att vi kan se ett annat designmönster som heter "Lazy Load". Kortfattat så kontrollerar Lazy Load om en instans redan har skapats; om inte skapar den en och lagrar den för framtida referens. Vilket kommer att innebär att alla efterföljande anropp kommer att få den lagrade instansen.
 
 #### 2.3.2 Fördelar med mönstret
 
 Finns givetvis flera fördelar med mönstret men skulle våga säga att en av de viktigaste fördelarna är att det är resursvänligt. Vilket innebär att man inte slösar minne för ett nytt objekt när man faktiskt inte behöver ett nytt objekt.
 
-En annan stor fördel med Singleto är du är helt säker på antalet instanser när du använder Singleton, och du kan ändra dig och hantera valfritt antal instanser.
+En annan stor fördel med Singleton är att du är helt säker på antalet instanser när du använder Singleton, och du kan ändra dig och hantera valfritt antal instanser.
 
 #### 2.3.3 Nackdelar med mönstret
 
@@ -204,13 +203,13 @@ Detta mönster används också inom många andra mönster som t.ex. Abstrakt fab
 
 ## 3. Dokumentation - Pizzafabrik
 
-Valde att skapa en pizzeria som applikation som bygger på fabriksmönstret och konstruktormönstret. Applikationen använder sig utav en pizzafabrik där vi ombeds att skapa en ny pizza. I stället för att då skapa den här pizzan direkt med den nya operatören eller via en annan skapande konstruktör ber vi istället vårt fabriksobjekt om en ny pizza. Det vill säga vi informerar fabriken om vilken typ av objekt som krävs (t.ex. "hawaii", "pepperoni") och den omedelbart skapar en nytt pizza objekt vi kan använda. 
+Valde att skapa en pizzeria som applikation som bygger på fabriksmönstret, konstruktormönstret och prototypmönstret. Applikationen använder sig utav en pizzafabrik där vi ombeds att skapa en ny pizza. I stället för att då skapa den här pizzan direkt med den nya operatören eller via en annan skapande konstruktör ber vi istället vårt fabriksobjekt om en ny pizza. Det vill säga vi informerar fabriken om vilken typ av objekt som krävs (t.ex. "hawaii", "pepperoni") och den omedelbart skapar ett nytt pizza objekt vi kan använda. 
 
 Applikation bygger också på att varje enskild pizza klass förlängs på basklassen "Pizza" som innehåller alla metoder som en gemensamma för varje pizza. Dessa metoder är baka, tillaga, skära och paketera. 
 
 Tyckte att uppgiften var givande och rolig att implementera då man fick en bra förståelse för hur dessa två mönster fungerar ihop. Mönstrena i sig tyckte jag inte var speciellt svåra att jobba med, men kan samtidigt känna att det skulle kräva mycket mera planering ifall man skulle applicera dem i ett större projekt. 
 
-Applikationen kan ses i filen [PizzaFactory.js](https://github.com/AndreasGunnahr/WEBB19-OOAD-Individuell/blob/master/PizzaFactory.js). Filen är körbar som konsolapplikation och visar hur de två ovan nämnde mönstrena fungerar i praktiken.
+Applikationen kan ses i filen [PizzaFactory.js](https://github.com/AndreasGunnahr/WEBB19-OOAD-Individuell/blob/master/PizzaFactory.js). Filen är körbar som konsolapplikation och visar hur de tre ovan nämnde mönstrena fungerar i praktiken.
 
 ## 4. OOAD - Pizzafabrik
 
@@ -218,7 +217,7 @@ OOAD är en förkorttning för objektorienterad analys och design. Man brukar s�
 
 ### 4.1. Beskrivning
 
-Företaget Pizzeria Arboga är en lokal pizzeria där kunder kan beställa olika typer av pizzor. Eftersom majoriten av företagets kunder är lokala så önskar man att systemet först innefattar svenska och ifall tid finns så lägger man till engelska. Då största delen av kundbasen är av den yngre generation så har efterfrågan på att kunna beställa pizza online vuxit. Då budgeten är ganska låg så kan de inte använda tredjepartstjänster och istället vill man investera på långsikt i ett eget beställningssystem som först och främst är anpassat till en mobil. De vill kunna på ett lättare och effektivare sätt hantera ordrar för att i slutändan behålla redan befintliga kunder men också skaffa nya. I dagsläget lägger en person för mycket tid på att ta emot ordrar via telefon, vilket tar mycket tid ifrån andra arbetsuppgifter. Man hoppas däför på att kunna få till ett så enkelt och smiddigt beställningsystem som möjligt för att minska tiden i telefon för de anställda. Man vill även kunna få statistik kring hur många beställningar man fått in på en månad och hur deras årliga försäljning sett ut.
+Företaget Pizzeria Arboga är en lokal pizzeria där kunder kan beställa olika typer av pizzor. Eftersom majoriten av företagets kunder är lokala så önskar man att systemet först innefattar svenska som språk och ifall tid finns så lägger man till engelska. Då största delen av kundbasen är av den yngre generation så har efterfrågan på att kunna beställa pizza online vuxit. Då budgeten är ganska låg så kan de inte använda tredjepartstjänster och istället vill man investera på långsikt i ett eget beställningssystem som först och främst är anpassat till en mobil. De vill kunna på ett lättare och effektivare sätt hantera ordrar för att i slutändan behålla redan befintliga kunder men också skaffa nya. I dagsläget lägger en person för mycket tid på att ta emot ordrar via telefon, vilket tar mycket tid ifrån andra arbetsuppgifter. Man hoppas däför på att kunna få till ett så enkelt och smiddigt beställningsystem som möjligt för att minska tiden i telefon för de anställda. Man vill även kunna få statistik kring hur många beställningar man fått in på en månad och hur deras årliga försäljning sett ut.
 
 #### 4.1.1. Slutgiltliga projektmål
 
